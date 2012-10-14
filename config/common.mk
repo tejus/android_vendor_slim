@@ -175,17 +175,15 @@ ifdef SLIM_NIGHTLY
         ro.goo.version=$(shell date +%m%d%Y) \
         ro.slim.version=Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-NIGHTLY-$(shell date +%m%d%Y)
 else
-    ifdef SLIM_RELEASE
+ifdef SLIM_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.goo.rom=Kayant \
+            ro.goo.rom=CodenameAndroid \
             ro.goo.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
             ro.slim.version=Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-OFFICIAL
-    else
+else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.goo.rom=Kayant \
-            ro.goo.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
             ro.slim.version=Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-UNOFFICIAL
-    endif
+endif
 endif
 
 ifdef SLIM_NIGHTLY
@@ -194,13 +192,13 @@ ifdef SLIM_NIGHTLY
         ro.goo.version=$(shell date +%m%d%Y) \
         ro.modversion=Slim-$(PRODUCT_RELEASE_NAME)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-NIGHTLY-$(shell date +%m%d%Y)
 else
-    ifdef SLIM_RELEASE
+ifdef SLIM_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.modversion=Slim-$(PRODUCT_RELEASE_NAME)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-OFFICIAL
-    else
-        PRODUCT_PROPERTY_OVERRIDES += \
-            ro.goo.rom=Kayant \
+            ro.goo.rom=CodenameAndroid \
             ro.goo.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
+            ro.modversion=Slim-$(PRODUCT_RELEASE_NAME)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-OFFICIAL
+else
+        PRODUCT_PROPERTY_OVERRIDES += \
             ro.modversion=Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(PRODUCT_RELEASE_NAME)-UNOFFICIAL
-    endif
+endif
 endif
