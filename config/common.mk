@@ -165,8 +165,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     updateme.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.rommanager.developerid=codenamedroid \
-    ro.goo.developerid=codenamedroid \
+    ro.rommanager.developerid=Kayant\
+    ro.goo.developerid=Kayant \
     ro.goo.board=$(TARGET_PRODUCT)
 
 ifdef SLIM_NIGHTLY
@@ -177,12 +177,12 @@ ifdef SLIM_NIGHTLY
 else
     ifdef SLIM_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.goo.rom=CodenameAndroid \
+            ro.goo.rom=Kayant \
             ro.goo.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
             ro.slim.version=Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-OFFICIAL
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.goo.rom=CodenameAndroid \
+            ro.goo.rom=Kayant \
             ro.goo.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
             ro.slim.version=Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-UNOFFICIAL
     endif
@@ -199,7 +199,7 @@ else
             ro.modversion=Slim-$(PRODUCT_RELEASE_NAME)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-OFFICIAL
     else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.goo.rom=CodenameAndroid \
+            ro.goo.rom=Kayant \
             ro.goo.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
             ro.modversion=Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(PRODUCT_RELEASE_NAME)-UNOFFICIAL
     endif
