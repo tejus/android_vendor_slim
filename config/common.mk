@@ -165,7 +165,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     updateme.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.rommanager.developerid=Kayant\
+    ro.rommanager.developerid=Kayant \
     ro.goo.developerid=Kayant \
     ro.goo.board=$(TARGET_PRODUCT)
 
