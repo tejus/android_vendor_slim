@@ -189,3 +189,9 @@ else
             ro.modversion=Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(PRODUCT_RELEASE_NAME)-UNOFFICIAL
     endif
 endif
+
+# Goo updater app
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.goo.developerid=Kayant \
+    ro.goo.rom=Slim \
+    ro.goo.version=$(shell date +%s)
