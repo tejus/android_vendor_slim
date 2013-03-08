@@ -30,6 +30,7 @@ PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/bin/compcache:system/bin/compcache \
     vendor/slim/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache
 
+<<<<<<< HEAD
 PRODUCT_COPY_FILES +=  \
     vendor/slim/proprietary/supersu/su:system/xbin/su
 
@@ -37,6 +38,8 @@ PRODUCT_COPY_FILES +=  \
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/vendor/etc/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
+=======
+>>>>>>> ecc0d60... Implementation of Koush superuser (1/3)
 # Bring in media files
 PRODUCT_COPY_FILES +=  \
 	vendor/slim/prebuilt/common/media/audio/alarms/Alarm_Classic.ogg:system/media/audio/alarms/Alarm_Beep_02.ogg \
@@ -106,15 +109,16 @@ PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/etc/cron/cron.daily/01clear_cache:system/etc/cron/cron.daily/01clear_cache \
     vendor/slim/prebuilt/common/etc/cron/cron.weekly/01clear_cache:system/etc/cron/cron.weekly/01clear_cache 
 
-PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/app/com.acquariusoft.UpdateMe.apk:data/app/com.acquariusoft.UpdateMe.apk
+# Embed SuperUser
+SUPERUSER_EMBEDDED := true
 
 # Required packages
 PRODUCT_PACKAGES += \
     Camera \
     Development \
     SpareParts \
-    Superuser
+    Superuser \
+    su
 
 # Optional packages
 PRODUCT_PACKAGES += \
