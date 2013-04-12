@@ -42,6 +42,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES +=  \
     vendor/slim/proprietary/supersu/su:system/xbin/su
 
+# Audio Config for DSPManager
+PRODUCT_COPY_FILES += \
+    vendor/slim/prebuilt/common/vendor/etc/audio_effects.conf:system/vendor/etc/audio_effects.conf
 
 # Bring in media files
 PRODUCT_COPY_FILES +=  \
