@@ -9,11 +9,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enterprise_mode=1 \
     ro.com.android.dateformat=MM-dd-yyyy \
     ro.com.android.dataroaming=false \
-    updateme.otauid=slimroms.net \
-    updateme.name=Slim \
-    updateme.urlcheck=http://slimota.slimroms.net/xml/update_me_check.xml \
-    updateme.urlelement=http://slimota.slimroms.net/xml/update_me_parts.xml \
-    updateme.reboottype=0
 
 # Backup Tool
 PRODUCT_COPY_FILES += \
