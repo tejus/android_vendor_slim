@@ -25,6 +25,9 @@ PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/bin/compcache:system/bin/compcache \
     vendor/slim/prebuilt/common/bin/handle_compcache:system/bin/handle_compcache
 
+PRODUCT_COPY_FILES +=  \
+    vendor/slim/proprietary/supersu/su:system/xbin/su
+
 # Audio Config for DSPManager
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/vendor/etc/audio_effects.conf:system/vendor/etc/audio_effects.conf
@@ -99,16 +102,12 @@ PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/etc/cron/cron.daily/01clear_cache:system/etc/cron/cron.daily/01clear_cache \
     vendor/slim/prebuilt/common/etc/cron/cron.weekly/01clear_cache:system/etc/cron/cron.weekly/01clear_cache 
 
-# Embed SuperUser
-SUPERUSER_EMBEDDED := true
-
 # Required packages
 PRODUCT_PACKAGES += \
     Camera \
     Development \
     SpareParts \
-    Superuser \
-    su
+    Superuser
 
 # Optional packages
 PRODUCT_PACKAGES += \
