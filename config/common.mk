@@ -145,38 +145,42 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JZO54K
 
 ifdef SLIM_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.goo.rom=NIGHTLY \
-        ro.goo.version=$(shell date +%m%d%Y) \
-        ro.slim.version=Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-NIGHTLY-$(shell date +%m%d%Y)
+            ro.goo.developerid=Kayant \
+            ro.goo.rom=SlimBean \
+            ro.goo.version=$(shell date +%m%d%Y) \
+            ro.slim.version=Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-NIGHTLY-$(shell date +%m%d%Y)
 else
 ifdef SLIM_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.goo.rom=Kayant \
-            ro.goo.version=$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE) \
+            ro.goo.developerid=Kayant \
+            ro.goo.rom=SlimBean \
+            ro.goo.version=$(shell date +%m%d%Y) \
             ro.slim.version=Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-OFFICIAL
 else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.goo.rom=Kayant \
-            ro.goo.version=Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(shell date +"%Y%m%d-%H%M")-UNOFFICIAL \
+            ro.goo.developerid=Kayant \
+            ro.goo.rom=SlimBean \
+            ro.goo.version=$(shell date +%m%d%Y) \
             ro.slim.version=Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(shell date +"%Y%m%d-%H%M")-UNOFFICIAL
     endif
 endif
 
 ifdef SLIM_NIGHTLY
     PRODUCT_PROPERTY_OVERRIDES += \
-        ro.goo.rom=NIGHTLY \
-        ro.goo.version=$(shell date +%m%d%Y) \
-        ro.modversion=Slim-$(PRODUCT_RELEASE_NAME)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-NIGHTLY-$(shell date +%m%d%Y)
+            ro.goo.developerid=Kayant \
+            ro.goo.rom=SlimBean \
+            ro.goo.version=$(shell date +%m%d%Y) \
+            ro.modversion=Slim-$(PRODUCT_RELEASE_NAME)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-NIGHTLY-$(shell date +%m%d%Y)
 else
 ifdef SLIM_RELEASE
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.goo.rom=Kayant \
+            ro.goo.developerid=Kayant \
             ro.goo.rom=SlimBean \
             ro.goo.version=$(shell date +%m%d%Y) \
             ro.modversion=Slim-$(PRODUCT_RELEASE_NAME)-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)-OFFICIAL
 else
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.goo.rom=Kayant \
+            ro.goo.developerid=Kayant \
             ro.goo.rom=SlimBean \
             ro.goo.version=$(shell date +%m%d%Y) \
             ro.modversion=Slim-$(PRODUCT_VERSION_MAJOR).$(PRODUCT_VERSION_MINOR).$(PRODUCT_VERSION_MAINTENANCE)$(PRODUCT_VERSION_DEVICE_SPECIFIC)-$(PRODUCT_RELEASE_NAME)-$(shell date +"%Y%m%d-%H%M")-UNOFFICIAL
