@@ -37,6 +37,12 @@ if [ ! -f "$OTAPACKAGE" ]; then
     exit 1
 fi
 
+# Delete unwanted files
+echo "Removing unwanted binaries..."
+rm -f $REPACK/ota/system/lib/libvideoeditor*
+rm -f $REPACK/ota/system/lib/hw/*goldfish*
+rm -f $REPACK/ota/system/etc/init.d/04modules
+
 OPTICHARGER=$ANDROID_BUILD_TOP/vendor/slim/tools/opticharger
 QUIET=-q
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
@@ -131,7 +137,7 @@ rm -rf $REPACK/ota/system/etc/recovery-resource.dat
 # Fix LCD Density for slim
 DEVICELCD=`sed -n -e'/ro\.sf\.lcd_density/s/^.*=//p' $OUT/system/build.prop`
 if [ "$DEVICELCD" = "240" ]; then
-   sed -i 's/ro.sf.lcd_density=240/ro.sf.lcd_density=182/g' $OUT/system/build.prop
+   sed -i 's/ro.sf.lcd_density=240/ro.sf.lcd_density=213/g' $OUT/system/build.prop
 elif [ "$DEVICELCD" = "320" ]; then
     sed -i 's/ro.sf.lcd_density=320/ro.sf.lcd_density=245/g' $OUT/system/build.prop
 elif [ "$DEVICELCD" = "480" ]; then
