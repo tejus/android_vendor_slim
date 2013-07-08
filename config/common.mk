@@ -60,6 +60,7 @@ SUPERUSER_EMBEDDED := true
 # Required packages
 PRODUCT_PACKAGES += \
     Camera \
+    Mms \
     Development \
     SpareParts \
     Superuser \
@@ -84,6 +85,7 @@ PRODUCT_PACKAGES += \
 
 # Extra tools
 PRODUCT_PACKAGES += \
+    lsof \
     openvpn \
     e2fsck \
     mke2fs \
