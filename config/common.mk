@@ -18,9 +18,18 @@ PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
     vendor/slim/prebuilt/common/etc/backup.conf:system/etc/backup.conf
 
+# Init.d stuff
+PRODUCT_COPY_FILES += \
+    vendor/slim/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
+    vendor/slim/prebuilt/common/bin/sysinit:system/bin/sysinit
+
 # SLIM-specific init file
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/etc/init.local.rc:root/init.slim.rc
+
+#userinit support
+PRODUCT_COPY_FILES += \
+    vendor/slim/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
 
 # Copy latinime for gesture typing
 PRODUCT_COPY_FILES += \
@@ -43,12 +52,6 @@ PRODUCT_COPY_FILES += \
 # Don't export PS1 in /system/etc/mkshrc.
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/etc/mkshrc:system/etc/mkshrc \
-    vendor/slim/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf
-
-PRODUCT_COPY_FILES += \
-    vendor/slim/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
-    vendor/slim/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
-    vendor/slim/prebuilt/common/bin/sysinit:system/bin/sysinit
 
 # Workaround for NovaLauncher zipalign fails
 PRODUCT_COPY_FILES += \
