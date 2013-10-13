@@ -13,6 +13,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
+# Disable excessive dalvik debug messages
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.debug.alloc=0
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     vendor/slim/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
@@ -138,10 +142,10 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Versioning System
-# Prepare for 4.3 Weekly build.1.6
+# Weekly 1.8
 PRODUCT_VERSION_MAJOR = 4.3
 PRODUCT_VERSION_MINOR = build
-PRODUCT_VERSION_MAINTENANCE = 1.6
+PRODUCT_VERSION_MAINTENANCE = 1.8
 ifdef SLIM_BUILD_EXTRA
     SLIM_POSTFIX := -$(SLIM_BUILD_EXTRA)
 endif
