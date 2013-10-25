@@ -94,7 +94,8 @@ PRODUCT_PACKAGES += \
     SlimFileManager \
     SlimCenter \
     LatinIME \
-    SlimIRC
+    SlimIRC \
+    BluetoothExt
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -142,10 +143,10 @@ PRODUCT_COPY_FILES += \
 endif
 
 # Versioning System
-# Weekly 1.8
+# code freeze stable 2
 PRODUCT_VERSION_MAJOR = 4.3
 PRODUCT_VERSION_MINOR = build
-PRODUCT_VERSION_MAINTENANCE = 1.8
+PRODUCT_VERSION_MAINTENANCE = 2
 ifdef SLIM_BUILD_EXTRA
     SLIM_POSTFIX := -$(SLIM_BUILD_EXTRA)
 endif
