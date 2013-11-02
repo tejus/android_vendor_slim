@@ -1,3 +1,4 @@
+add_lunch_combo slim_mb526-userdebug
 add_lunch_combo slim_captivatemtd-userdebug
 add_lunch_combo slim_crespo-userdebug
 add_lunch_combo slim_crespo4g-userdebug
