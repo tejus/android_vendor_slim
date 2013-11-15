@@ -102,6 +102,9 @@ PRODUCT_PACKAGES += \
     mke2fs \
     tune2fs
 
+# easy way to extend to add more packages
+-include vendor/extra/product.mk
+
 PRODUCT_PACKAGE_OVERLAYS += vendor/slim/overlay/common
 
 # Boot animation include
@@ -140,7 +143,7 @@ endif
 # kitkat initial start
 PRODUCT_VERSION_MAJOR = 4.4
 PRODUCT_VERSION_MINOR = alpha
-PRODUCT_VERSION_MAINTENANCE = 1
+PRODUCT_VERSION_MAINTENANCE = 1.1
 ifdef SLIM_BUILD_EXTRA
     SLIM_POSTFIX := -$(SLIM_BUILD_EXTRA)
 endif
@@ -160,4 +163,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.slim.version=$(SLIM_VERSION) \
     ro.modversion=$(SLIM_MOD_VERSION)
 
--include vendor/slim/sepolicy/sepolicy.mk
