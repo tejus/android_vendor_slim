@@ -94,7 +94,8 @@ PRODUCT_PACKAGES += \
     SlimFileManager \
     LatinIME \
     SlimIRC \
-    BluetoothExt
+    BluetoothExt \
+    DashClock
 
 # Extra tools
 PRODUCT_PACKAGES += \
@@ -144,7 +145,7 @@ endif
 # KitKat SlimKat beta releases
 PRODUCT_VERSION_MAJOR = 4.4.2
 PRODUCT_VERSION_MINOR = beta
-PRODUCT_VERSION_MAINTENANCE = 1.6
+PRODUCT_VERSION_MAINTENANCE = 1.7
 ifdef SLIM_BUILD_EXTRA
     SLIM_POSTFIX := -$(SLIM_BUILD_EXTRA)
 endif
