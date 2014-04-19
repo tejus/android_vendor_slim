@@ -25,10 +25,8 @@ add_lunch_combo slim_i9100g-userdebug
 add_lunch_combo slim_i9300-userdebug
 add_lunch_combo slim_jflte-userdebug
 add_lunch_combo slim_ls980-userdebug
-add_lunch_combo slim_m7att-userdebug
+add_lunch_combo slim_m7-userdebug
 add_lunch_combo slim_m7spr-userdebug
-add_lunch_combo slim_m7tmo-userdebug
-add_lunch_combo slim_m7ul-userdebug
 add_lunch_combo slim_m7vzw-userdebug
 add_lunch_combo slim_maguro-userdebug
 add_lunch_combo slim_mako-userdebug
@@ -49,6 +47,7 @@ add_lunch_combo slim_tilapia-userdebug
 add_lunch_combo slim_toro-userdebug
 add_lunch_combo slim_toroplus-userdebug
 add_lunch_combo slim_vibrantmtd-userdebug
+add_lunch_combo slim_v500-userdebug
 add_lunch_combo slim_vs980-userdebug
 add_lunch_combo slim_xt925-userdebug
 add_lunch_combo slim_xt926-userdebug
